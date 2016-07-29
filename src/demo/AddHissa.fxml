@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="280.0" prefWidth="434.0" stylesheets="@../com/css/master.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.AddHissaController">
+   <children>
+      <Pane id="title_pane" prefHeight="39.0" prefWidth="433.0">
+         <children>
+            <Label id="title_label" layoutX="8.0" layoutY="4.0" prefHeight="33.0" prefWidth="380.0" text="Add Plot Information" />
+            <Label id="close_btn" layoutX="388.0" layoutY="-1.0" onMouseClicked="#close_window" prefHeight="39.0" prefWidth="35.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="1.0" layoutY="39.0" prefHeight="238.0" prefWidth="433.0">
+         <children>
+            <Label layoutX="14.0" layoutY="12.0" prefHeight="28.0" prefWidth="68.0" text="Plot No" />
+            <Label layoutX="147.0" layoutY="12.0" prefHeight="28.0" prefWidth="85.0" text="Survey No" />
+            <Label layoutX="14.0" layoutY="56.0" prefHeight="28.0" prefWidth="91.0" text="Total Area" />
+            <Label id="tunit" fx:id="tunit" layoutX="271.0" layoutY="56.0" prefHeight="28.0" prefWidth="85.0" />
+            <Label id="total_area" fx:id="total_area" layoutX="149.0" layoutY="56.0" prefHeight="28.0" prefWidth="116.0" />
+            <Label layoutX="14.0" layoutY="101.0" prefHeight="28.0" prefWidth="116.0" text="Area Purchased" />
+            <TextField fx:id="area_purchased" layoutX="133.0" layoutY="101.0" prefHeight="28.0" prefWidth="132.0" />
+            <ComboBox id="plot_unit" fx:id="punit" layoutX="281.0" layoutY="100.0" prefHeight="30.0" prefWidth="142.0" promptText="--Unit--" />
+            <Label layoutX="14.0" layoutY="147.0" text="Title Owner" />
+            <TextField fx:id="title_owner" layoutX="133.0" layoutY="146.0" prefHeight="30.0" prefWidth="292.0" />
+            <Button layoutX="275.0" layoutY="193.0" mnemonicParsing="false" onAction="#addHissa" text="Save" />
+            <Button layoutX="344.0" layoutY="193.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="79.0" text="Cancel" />
+            <Label id="plot_no" fx:id="plot_no" layoutX="94.0" layoutY="11.0" prefHeight="30.0" prefWidth="42.0" />
+            <Label id="survey_no" fx:id="survey_no" layoutX="241.0" layoutY="11.0" prefHeight="30.0" prefWidth="51.0" />
+            <Label layoutX="299.0" layoutY="12.0" prefHeight="28.0" prefWidth="79.0" text="Hissa No" />
+            <TextField id="hissa_no" fx:id="hissa_no" layoutX="372.0" layoutY="14.0" prefHeight="28.0" prefWidth="51.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

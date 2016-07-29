@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="630.0" prefWidth="677.0" styleClass="mainFxmlClass" stylesheets="@../com/css/master.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="demo.FXMLDocumentController">
+   <children>
+      <Pane id="#close_btn" layoutX="4.0" layoutY="2.0" prefHeight="133.0" prefWidth="666.0">
+         <children>
+            <TextField id="search-txt" fx:id="search" layoutX="6.0" layoutY="61.0" onKeyReleased="#searchplothistry1" prefHeight="48.0" prefWidth="657.0" promptText="Enter here Project Name ,Location,Survy no,City,District,Ownership." stylesheets="@../com/css/master.css" />
+            <Label id="search-label" layoutX="600.0" layoutY="64.0" prefHeight="22.0" prefWidth="52.0" />
+            <Pane id="title_pane" layoutX="-7.0" prefHeight="48.0" prefWidth="684.0">
+               <children>
+                  <Label id="title_label" layoutX="-3.0" layoutY="11.0" prefHeight="33.0" prefWidth="666.0" stylesheets="@../com/css/master.css" text="SEARCH HISTORY" textFill="#e6f208" />
+                  <Label id="close_btn" layoutX="600.0" layoutY="3.0" onMouseClicked="#close_window" prefHeight="42.0" prefWidth="32.0" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane id="list" layoutX="14.0" layoutY="148.0" prefHeight="373.0" prefWidth="214.0">
+         <children>
+            <ListView id="viewlist" fx:id="viewlist" layoutX="1.0" layoutY="1.0" onMouseClicked="#plotnos" prefHeight="373.0" prefWidth="212.0" />
+         </children></Pane>
+      <ComboBox id="plots" fx:id="plots" layoutX="249.0" layoutY="176.0" onAction="#hiss" prefHeight="30.0" prefWidth="161.0" promptText="--select plot no--" />
+      <ComboBox id="hissssno" fx:id="hissa" layoutX="444.0" layoutY="174.0" onAction="#openHistory" prefHeight="33.0" prefWidth="161.0" promptText="--select hissa no---" />
+      <Label fx:id="sproject_id" layoutX="337.0" layoutY="218.0" prefHeight="28.0" prefWidth="52.0" />
+      <Label fx:id="splot_id" layoutX="249.0" layoutY="232.0" prefHeight="28.0" prefWidth="52.0" />
+      <Label fx:id="shissa_id" layoutX="259.0" layoutY="293.0" prefHeight="28.0" prefWidth="52.0" />
+   </children>
+</AnchorPane>

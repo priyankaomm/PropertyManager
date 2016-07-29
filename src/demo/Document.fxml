@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="698.0" prefWidth="537.0" stylesheets="@../com/css/master.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="demo.FXMLDocumentController">
+   <children>
+      <Pane id="doc_pane" layoutX="6.0" layoutY="34.0" prefHeight="656.0" prefWidth="526.0" />
+      <Label id="close_btn" layoutX="480.0" layoutY="-3.0" onMouseClicked="#close_window" prefHeight="28.0" prefWidth="39.0" />
+   </children>
+</AnchorPane>

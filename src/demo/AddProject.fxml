@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+
+<AnchorPane fx:id="add_pane" prefHeight="758.0" prefWidth="639.0" stylesheets="@../com/css/master.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="demo.FXMLDocumentController">
+   <children>
+      <Pane layoutY="1.0" prefHeight="761.0" prefWidth="635.0">
+         <children>
+            <Pane cacheShape="false" prefHeight="763.0" prefWidth="635.0">
+               <children>
+                  <Label layoutX="42.0" layoutY="54.0" text="Project Name" />
+                  <TextField fx:id="project_name" layoutX="145.0" layoutY="54.0" prefHeight="25.0" prefWidth="235.0" promptText="Enter Project Name" />
+                  <Button layoutX="145.0" layoutY="91.0" mnemonicParsing="false" onAction="#openFileChooser" text="Upload Logo" />
+                  <Label alignment="CENTER" layoutX="46.0" layoutY="137.0" prefHeight="17.0" prefWidth="93.0" text="City" textAlignment="CENTER" />
+                  <ComboBox fx:id="city" layoutX="38.0" layoutY="176.0" prefHeight="32.0" prefWidth="110.0" promptText="--City--">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Pune" />
+                        <String fx:value="Mumbai" />
+                    </FXCollections>
+                  </items>
+                  </ComboBox>
+                  <Label alignment="CENTER" layoutX="158.0" layoutY="137.0" prefHeight="17.0" prefWidth="116.0" text="District" />
+                  <ComboBox fx:id="district" layoutX="158.0" layoutY="176.0" prefHeight="32.0" prefWidth="123.0" promptText="--District--">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Haveli" />
+                        <String fx:value="Maval" />
+                    </FXCollections>
+                  </items>
+                  </ComboBox>
+                  <Label alignment="CENTER" layoutX="292.0" layoutY="137.0" prefHeight="17.0" prefWidth="130.0" text="Location" />
+                  <ComboBox fx:id="location" layoutX="288.0" layoutY="176.0" prefHeight="32.0" prefWidth="139.0" promptText="--Location--">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Chinchwad" />
+                        <String fx:value="Pimpri" />
+                        <String fx:value="Baner" />
+                        <String fx:value="Balewadi" />
+                    </FXCollections>
+                  </items>
+                  </ComboBox>
+                  <ImageView fx:id="logo" fitHeight="164.0" fitWidth="181.0" layoutX="436.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label layoutX="39.0" layoutY="223.0" text="OwnerShip" />
+                  <Label layoutX="48.0" layoutY="244.0" text="/Firm Name" />
+                  <TextField fx:id="owner" layoutX="150.0" layoutY="233.0" prefHeight="25.0" prefWidth="161.0" promptText="Enter Owner/Firm Name" />
+                  <Label fx:id="file_path" layoutX="257.0" layoutY="93.0" prefHeight="28.0" prefWidth="13.0" />
+                  <Label fx:id="firm_list" layoutX="152.0" layoutY="271.0" prefHeight="17.0" prefWidth="274.0" />
+                  <Button id="add_btn" layoutX="311.0" layoutY="225.0" mnemonicParsing="false" onAction="#addMoreFirms" prefHeight="39.0" prefWidth="62.0" stylesheets="@../com/css/master.css" />
+                  <Label alignment="TOP_LEFT" layoutX="33.0" layoutY="345.0" prefHeight="17.0" prefWidth="96.0" text="Total Area" textAlignment="CENTER" />
+                  <TextField fx:id="total_area" layoutX="150.0" layoutY="347.0" prefHeight="25.0" prefWidth="139.0" promptText="Enter Total Area" />
+                  <Button layoutX="147.0" layoutY="307.0" mnemonicParsing="false" onAction="#openFileChooserForMap" text="Upload Map" />
+                  <Label alignment="TOP_LEFT" layoutX="33.0" layoutY="309.0" prefHeight="17.0" prefWidth="96.0" text="Browse Map" textAlignment="CENTER" />
+                  <Label fx:id="map_path" alignment="TOP_LEFT" layoutX="267.0" layoutY="309.0" prefHeight="28.0" prefWidth="355.0" textAlignment="CENTER" />
+                  <Label fx:id="project_id1" layoutX="41.0" layoutY="11.0" prefHeight="17.0" prefWidth="58.0" />
+                  <ImageView fx:id="map" fitHeight="308.0" fitWidth="492.0" layoutX="72.0" layoutY="401.0" pickOnBounds="true" preserveRatio="true" />
+                  <Pane id="title_pane" layoutX="-1.0" layoutY="-3.0" prefHeight="39.0" prefWidth="639.0">
+                     <children>
+                        <Label id="title_label" contentDisplay="CENTER" layoutX="6.0" layoutY="7.0" prefHeight="32.0" prefWidth="139.0" text="Add Project" />
+                        <Label id="close_btn" layoutX="591.0" layoutY="3.0" onMouseClicked="#close_Projectwindow" prefHeight="32.0" prefWidth="40.0" />
+                        <Label id="pbuilder_id" fx:id="pbuilder_id" layoutX="361.0" layoutY="11.0" prefHeight="28.0" prefWidth="52.0" />
+                     </children>
+                  </Pane>
+                  <Button layoutX="453.0" layoutY="718.0" mnemonicParsing="false" onAction="#insertProject" text="Submit" />
+                  <Button cancelButton="true" layoutX="544.0" layoutY="718.0" mnemonicParsing="false" onMouseClicked="#close_Projectwindow" text="Cancel" />
+                  <Label alignment="TOP_LEFT" layoutX="379.0" layoutY="232.0" prefHeight="17.0" prefWidth="96.0" text="Survey No" textAlignment="CENTER" />
+                  <TextField fx:id="survey_no" layoutX="491.0" layoutY="232.0" prefHeight="25.0" prefWidth="139.0" promptText="Enter Survey No" />
+                  <ComboBox id="unit_list" fx:id="unitList" layoutX="305.0" layoutY="347.0" prefHeight="25.0" prefWidth="150.0" promptText="--Unit--" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
