@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Demo.jnlp">
+  <information>
+    <title>Demo</title>
+    <vendor>ADMIN</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Demo.jar" size="4506462" download="eager" />
+    <jar href="lib\JMapViewer.jar" size="146607" download="eager" />
+    <jar href="lib\aspose-imaging-3.6-javadoc.jar" size="6385754" download="eager" />
+    <jar href="lib\aspose-imaging-3.6.jar" size="15866357" download="eager" />
+    <jar href="lib\commons-io-2.5.jar" size="208696" download="eager" />
+    <jar href="lib\imgscalr-lib-4.2.jar" size="226824" download="eager" />
+    <jar href="lib\jPDFViewerFX.jar" size="3040626" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.7-bin.jar" size="709922" download="eager" />
+    <jar href="lib\pdf-renderer.jar" size="1393301" download="eager" />
+    <jar href="lib\rs2xml.jar" size="171578" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Demo" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="demo.Demo"  name="Demo" />
+  <update check="always"/>
+</jnlp>
