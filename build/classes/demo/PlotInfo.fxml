@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.media.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="610.0" prefWidth="827.0" stylesheets="@../com/css/master.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="demo.FXMLDocumentController">
+   <children>
+      <Pane id="main_pane" fx:id="main_pane" layoutX="11.0" layoutY="54.0" prefHeight="545.0" prefWidth="592.0">
+         <children>
+            <Pane id="ipane" fx:id="center_pane" layoutX="316.0" layoutY="13.0" prefHeight="477.0" prefWidth="260.0">
+               <children>
+                  <ImageView id="plot_map" fitHeight="477.0" fitWidth="257.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button id="sold_area" fx:id="soldarea" layoutX="40.0" layoutY="55.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="127.0" />
+                  <Button id="nonsold_area" fx:id="nonsold" layoutX="40.0" layoutY="346.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="127.0" />
+               </children>
+            </Pane>
+            <Label layoutX="14.0" layoutY="18.0" prefHeight="28.0" prefWidth="104.0" text="Survey No" />
+            <Label id="survey_no" fx:id="plot_survey" layoutX="96.0" layoutY="18.0" prefHeight="28.0" prefWidth="162.0" />
+            <Label layoutX="14.0" layoutY="59.0" prefHeight="28.0" prefWidth="114.0" text="Plot Total Area" />
+            <TextField id="total_area" fx:id="plot_area" layoutX="133.0" layoutY="60.0" prefHeight="28.0" prefWidth="52.0" />
+            <Button id="btn" fx:id="plot_area_save" layoutX="154.0" layoutY="98.0" mnemonicParsing="false" onAction="#savePlotArea" text="Save" />
+            <ComboBox id="plot_unit" fx:id="plot_unit" layoutX="22.0" layoutY="98.0" prefHeight="32.0" prefWidth="127.0" promptText="--Select Unit--" />
+            <Label id="unit" fx:id="tunit" layoutX="201.0" layoutY="60.0" prefHeight="28.0" prefWidth="59.0" />
+            <Pane id="hissa_pane" fx:id="hpane" layoutY="145.0" prefHeight="242.0" prefWidth="299.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="48.0" prefHeight="28.0" prefWidth="116.0" text="Area Purchased" />
+                  <TextField fx:id="title_owner" layoutX="16.0" layoutY="151.0" prefHeight="30.0" prefWidth="267.0" />
+                  <Label layoutX="14.0" layoutY="123.0" text="Title Owner" />
+                  <ComboBox id="punit" fx:id="punit" layoutX="139.0" layoutY="83.0" prefHeight="30.0" prefWidth="142.0" promptText="--Unit--" />
+                  <TextField fx:id="area_purchased" layoutX="139.0" layoutY="48.0" prefHeight="28.0" prefWidth="142.0" />
+                  <Label layoutX="18.0" layoutY="9.0" prefHeight="28.0" prefWidth="79.0" text="Hissa No" />
+                  <TextField id="hissa_no" fx:id="hissa_no" layoutX="139.0" layoutY="9.0" prefHeight="28.0" prefWidth="127.0" />
+                  <Button fx:id="save_btn" layoutX="139.0" layoutY="189.0" mnemonicParsing="false" onAction="#addHissa" text="Save" />
+                  <Button layoutX="210.0" layoutY="189.0" mnemonicParsing="false" onAction="#closeHissa" prefHeight="32.0" prefWidth="79.0" text="Cancel" />
+               </children>
+            </Pane>
+            <Pane id="table_pane" fx:id="table_pane" layoutX="997.0" prefHeight="502.0" prefWidth="485.0">
+               <children>
+                  <TableView id="hissa_table" fx:id="hissa_table" layoutX="3.0" layoutY="7.0" prefHeight="494.0" prefWidth="472.0">
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#openAddHistory" text="Add history" />
+                              <MenuItem mnemonicParsing="false" onAction="#openViewHistory" text="View history" />
+                              <MenuItem mnemonicParsing="false" onAction="#openEditHissa" text="Edit" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu></TableView>
+               </children>
+            </Pane>
+         </children></Pane>
+      <Button layoutX="23.0" layoutY="556.0" mnemonicParsing="false" onAction="#openHissaWindow" text="Add" />
+      <Button layoutX="91.0" layoutY="556.0" mnemonicParsing="false" text="Edit" />
+      <Button fx:id="show_btn" layoutX="158.0" layoutY="556.0" mnemonicParsing="false" onAction="#showHissaTable" text="Show" />
+      <Pane id="title_pane" layoutX="4.0" layoutY="5.0" prefHeight="38.0" prefWidth="816.0">
+         <children>
+            <Label id="title_label" fx:id="plot_no" layoutX="14.0" layoutY="8.0" prefHeight="32.0" prefWidth="392.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label id="close_btn" layoutX="764.0" layoutY="-3.0" onMouseClicked="#close_PlotInfo" prefHeight="42.0" prefWidth="30.0" />
+            <Label id="plotinfo_id" fx:id="plotinfo_id" layoutX="724.0" prefHeight="28.0" prefWidth="40.0" />
+            <Label id="plotinfo_plotid" fx:id="plot_info_plotid" layoutX="674.0" layoutY="4.0" prefHeight="28.0" prefWidth="33.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

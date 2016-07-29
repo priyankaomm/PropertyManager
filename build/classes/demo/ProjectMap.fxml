@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="498.0" prefWidth="672.0" stylesheets="@../com/css/master.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="demo.FXMLDocumentController">
+   <children>
+      <Pane id="title_pane" prefHeight="43.0" prefWidth="1062.0">
+         <children>
+            <Label id="title_label" layoutX="7.0" layoutY="8.0" prefHeight="28.0" prefWidth="1029.0" text="Map">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label id="close_btn" layoutX="1010.0" layoutY="3.0" onMouseClicked="#close_window" prefHeight="32.0" prefWidth="40.0" />
+         </children>
+      </Pane>
+      <Label id="pid" fx:id="project_id" layoutX="9.0" layoutY="64.0" prefHeight="27.0" prefWidth="27.0" />
+      <Pane id="map_pane" fx:id="map_panel" layoutX="10.0" layoutY="56.0" prefHeight="694.0" prefWidth="1045.0">
+         <children>
+            <Pane id="side-bar" layoutX="1057.0" layoutY="501.0" prefHeight="179.0" prefWidth="362.0">
+               <children>
+                  <Label id="plot_sold" layoutX="173.0" layoutY="83.0" prefHeight="32.0" prefWidth="153.0" />
+                  <Label id="heading-lbl" layoutX="5.0" layoutY="83.0" prefHeight="32.0" prefWidth="153.0" text="Total Sold Area" />
+                  <Label id="heading-lbl" layoutX="14.0" layoutY="8.0" prefHeight="32.0" prefWidth="111.0" text="Total Area" />
+                  <Label id="area" layoutX="125.0" layoutY="8.0" prefHeight="32.0" prefWidth="120.0" />
+                  <Label id="area_unit" layoutX="245.0" layoutY="8.0" prefHeight="32.0" prefWidth="111.0" />
+                  <Label id="heading-lbl" layoutX="9.0" layoutY="44.0" prefHeight="32.0" prefWidth="145.0" text="Total Plot Area" />
+                  <Label id="plot_area" layoutX="173.0" layoutY="44.0" prefHeight="28.0" prefWidth="159.0" />
+                  <Label id="heading-lbl" layoutX="5.0" layoutY="123.0" prefHeight="32.0" prefWidth="153.0" text="Remaining Area" />
+                  <Label id="plot_rem" layoutX="166.0" layoutY="123.0" prefHeight="32.0" prefWidth="167.0" />
+               </children>
+            </Pane>
+         </children></Pane>
+      <Label id="sno" fx:id="sno" alignment="CENTER" layoutX="10.0" layoutY="56.0" prefHeight="28.0" prefWidth="1045.0" />
+   </children>
+</AnchorPane>

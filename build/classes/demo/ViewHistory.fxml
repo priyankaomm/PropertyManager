@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="history_main" onMouseClicked="#close_history" prefHeight="615.0" prefWidth="837.0" stylesheets="@../com/css/master.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="demo.FXMLDocumentController">
+   <children>
+      <Pane id="title_pane" layoutX="3.0" layoutY="3.0" prefHeight="36.0" prefWidth="831.0">
+         <children>
+            <Label id="view_plot_id" fx:id="view_plot_id" prefHeight="28.0" prefWidth="40.0" />
+            <Label id="title_label" layoutX="7.0" layoutY="6.0" prefHeight="17.0" prefWidth="266.0" text="Land History" />
+            <Label id="close_btn" layoutX="779.0" layoutY="-2.0" onMouseClicked="#close_view_history" prefHeight="32.0" prefWidth="52.0" />
+            <Label id="view_hissa_id" fx:id="view_hissa_id" layoutX="403.0" layoutY="5.0" prefHeight="28.0" prefWidth="40.0" />
+         </children>
+      </Pane>
+      <ScrollPane id="vscroll" fx:id="vscroll" layoutX="3.0" layoutY="97.0" prefHeight="518.0" prefViewportHeight="421.0" prefViewportWidth="614.0" prefWidth="831.0" />
+      <Pane fx:id="search_pane" layoutX="5.0" layoutY="38.0" prefHeight="60.0" prefWidth="831.0">
+         <children>
+            <TextField id="search-txt" fx:id="search_history" layoutX="610.0" layoutY="11.0" onKeyReleased="#searchFromHistory" prefHeight="38.0" prefWidth="214.0" promptText="Search Here" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

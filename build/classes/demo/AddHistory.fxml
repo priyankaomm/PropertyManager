@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="547.0" prefWidth="754.0" stylesheets="@../com/css/master.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="demo.FXMLDocumentController">
+   <children>
+      <Pane id="title_pane" layoutY="-1.0" onMouseClicked="#addMoreFirms" prefHeight="37.0" prefWidth="969.0">
+         <children>
+            <Label id="title_label" layoutY="5.0" prefHeight="32.0" prefWidth="128.0" text="Add History" />
+            <Label id="close_btn" layoutX="923.0" layoutY="-1.0" onMouseClicked="#close_history" prefHeight="42.0" prefWidth="30.0">
+               <tooltip>
+                  <Tooltip text="Close Window" />
+               </tooltip></Label>
+            <Label id="addhistory_plotid" fx:id="addhistory_plotid" layoutX="431.0" layoutY="6.0" prefHeight="28.0" prefWidth="33.0" />
+            <Label id="addhistory_hissaid" fx:id="addhistory_hissaid" layoutX="482.0" layoutY="6.0" prefHeight="28.0" prefWidth="33.0" />
+            <Label id="addhistory_id" fx:id="addhistory_id" layoutX="397.0" layoutY="6.0" prefHeight="28.0" prefWidth="33.0" />
+            <Label id="hissa_id" fx:id="hissa_id" layoutX="316.0" layoutY="6.0" prefHeight="28.0" prefWidth="27.0" />
+         </children>
+      </Pane>
+      <ScrollPane id="hscroll" fx:id="hscroll" layoutY="36.0" prefHeight="511.0" prefViewportHeight="368.0" prefViewportWidth="602.0" prefWidth="969.0">
+         <content>
+            <Pane id="history_pane" fx:id="history_pane" layoutY="36.0" prefHeight="510.0" prefWidth="738.0" />
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

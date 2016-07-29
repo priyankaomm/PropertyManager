@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+
+<AnchorPane prefHeight="749.0" prefWidth="1277.0" stylesheets="@../com/css/master.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="demo.FXMLDocumentController">
+    <children>
+      <Pane id="title_pane" layoutX="-9.0" layoutY="-9.0" prefHeight="47.0" prefWidth="1286.0">
+         <children>
+            <Label id="title_label" layoutX="9.0" layoutY="9.0" prefHeight="38.0" prefWidth="137.0" text="DASHBOARD">
+               <font>
+                  <Font name="Tahoma Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label id="builder_id" fx:id="builder_id" layoutX="196.0" layoutY="15.0" prefHeight="28.0" prefWidth="61.0" />
+            <Label id="close_btn" layoutX="1226.0" layoutY="6.0" onMouseClicked="#close_All" prefHeight="28.0" prefWidth="34.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="-1.0" layoutY="188.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="561.0" prefWidth="214.0" style="-fx-background-color: rgb(66,74,93);">
+         <children>
+            <Pane id="mitems" layoutX="-5.0" layoutY="46.0" onMouseClicked="#addProjectAction" prefHeight="45.0" prefWidth="216.0" stylesheets="@../com/css/master.css">
+               <children>
+                  <Label id="mlabel" alignment="CENTER" layoutX="9.0" layoutY="4.0" prefHeight="38.0" prefWidth="204.0" stylesheets="@../com/css/master.css" text="ADD PROJECT" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane id="mitems" layoutX="-5.0" layoutY="113.0" onMouseClicked="#addUnitAction" prefHeight="45.0" prefWidth="216.0" stylesheets="@../com/css/master.css">
+               <children>
+                  <Label id="mlabel" alignment="CENTER" layoutX="9.0" layoutY="4.0" prefHeight="38.0" prefWidth="188.0" stylesheets="@../com/css/master.css" text="ADD UNIT" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane id="mitems" layoutY="181.0" onMouseClicked="#searchHistory" prefHeight="45.0" prefWidth="219.0" stylesheets="@../com/css/master.css">
+               <children>
+                  <Label id="mlabel" alignment="CENTER" layoutX="9.0" layoutY="4.0" prefHeight="38.0" prefWidth="188.0" stylesheets="@../com/css/master.css" text="SEARCH HISTORY" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane id="mitems" layoutY="241.0" prefHeight="45.0" prefWidth="219.0" stylesheets="@../com/css/master.css">
+               <children>
+                  <Label id="mlabel" alignment="CENTER" layoutX="9.0" layoutY="4.0" onMouseClicked="#handleViewMap" prefHeight="38.0" prefWidth="188.0" stylesheets="@../com/css/master.css" text="VIEW MAP" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane id="mitems" layoutX="-4.0" layoutY="442.0" prefHeight="45.0" prefWidth="219.0" stylesheets="@../com/css/master.css" />
+         </children>
+      </Pane>
+      <Pane layoutX="213.0" layoutY="189.0" style="-fx-background-image: url(&quot;../6.png&quot;);">
+         <children>
+            <ScrollPane id="scroll_pane" fx:id="scroll" maxHeight="1.7976931348623157E308" prefHeight="561.0" prefWidth="1060.0" stylesheets="@../com/css/master.css" vbarPolicy="ALWAYS">
+               <content>
+                  <Pane prefHeight="559.0" prefWidth="1046.0" />
+               </content>
+            </ScrollPane>
+         </children>
+      </Pane>
+      <Pane id="top_pane" layoutY="38.0" prefHeight="150.0" prefWidth="1276.0" style="-fx-background-color: rgba(66,74,93,0.7);">
+         <children>
+            <ImageView id="profile_photo" fx:id="photo" fitHeight="119.0" fitWidth="102.0" layoutX="39.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../com/images/noprofile.jpg" />
+               </image>
+            </ImageView>
+            <ImageView id="builder_logo" fitHeight="69.0" fitWidth="200.0" layoutX="538.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../com/images/blogo.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="refreshButton" layoutX="1082.0" layoutY="17.0" mnemonicParsing="false" onAction="#refresh" onMouseClicked="#refresh" text="Refresh" />
+            <TextField id="search-txt" fx:id="search" layoutX="1033.0" layoutY="61.0" onKeyReleased="#searchProject" prefHeight="38.0" prefWidth="219.0" promptText="Search Project Here" />
+            <Label id="search-label" layoutX="1190.0" layoutY="59.0" prefHeight="22.0" prefWidth="52.0" />
+            <Button fx:id="logoutButton" layoutX="1164.0" layoutY="17.0" mnemonicParsing="false" onAction="#handleLogout" onMouseClicked="#refresh" text="Logout" />     
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>

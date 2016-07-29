@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="290.0" prefWidth="543.0" stylesheets="@../com/css/master.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="demo.FXMLDocumentController">
+   <children>
+      <Pane id="title_pane" layoutX="2.0" layoutY="3.0" prefHeight="35.0" prefWidth="537.0">
+         <children>
+            <Label id="title_label" layoutX="6.0" layoutY="5.0" text="Add Purchaser" />
+            <Label id="close_btn" layoutX="491.0" layoutY="-3.0" onMouseClicked="#close_window" />
+            <Label id="pc_hissa_id" fx:id="pc_hissa_id" layoutX="168.0" prefHeight="28.0" prefWidth="76.0" />
+            <Label id="pc_hissa_survey" fx:id="pc_hissa_survey" layoutX="269.0" layoutY="4.0" prefHeight="28.0" prefWidth="61.0" />
+            <Label id="pc_owner_id" fx:id="pc_owner_id" layoutX="357.0" layoutY="4.0" prefHeight="28.0" prefWidth="61.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="2.0" layoutY="238.0" prefHeight="54.0" prefWidth="537.0">
+         <children>
+            <Button layoutX="454.0" layoutY="14.0" mnemonicParsing="false" onAction="#savePurchaser" text="Save" />
+            <ComboBox id="owner_id_list" fx:id="owner_id_list" layoutX="56.0" layoutY="12.0" prefHeight="30.0" prefWidth="76.0" />
+         </children>
+      </Pane>
+      <ScrollPane id="pcscroll" fx:id="pcscroll" layoutX="2.0" layoutY="38.0" prefHeight="200.0" prefWidth="537.0" />
+   </children>
+</AnchorPane>
